@@ -1,0 +1,218 @@
+/* Reset and Base Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Video Background */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Logo */
+.logo {
+    position: fixed; /* Ensures the logo stays fixed during scrolling */
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+}
+
+/* Content */
+.content {
+    /* Removed absolute positioning to allow normal flow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure content takes full viewport height */
+    z-index: 1;
+    padding-bottom: 100px; /* Optional: Add padding to ensure footer is below */
+}
+
+/* Button */
+.button {
+    background-color: #991B1F;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Original padding */
+    border-radius: 7px; /* Original border radius */
+    font-size: 25px; /* Original font size */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    outline: none;
+    opacity: 1; /* Ensure the button is visible */
+    transition: transform 1s ease; /* Smooth transition for transform */
+    position: fixed; /* Fixed initially */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the button */
+    z-index: 1; /* Ensure it appears above other content */
+}
+
+.button:hover {
+    background-color: #b22234;
+}
+
+/* Scrolled State */
+.button.scrolled {
+    transform: translate(-50%, -300%); /* Move the button upwards */
+}
+
+/* Footer */
+.impressum {
+    background-color: #991B1F;
+    color: white;
+    padding: 20px;
+    text-align: left; /* Ensure default text alignment is left */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Centered Angaben Section with Left-Aligned Text */
+.impressum .angaben {
+    max-width: 600px;           /* Sets a maximum width for the container */
+    margin: 0 auto 20px auto;   /* Centers the container horizontally and adds bottom margin */
+    text-align: left;           /* Aligns text to the left within the container */
+    margin-left: 20px;          /* Adds left margin */
+}
+
+/* Style links inside the angaben section */
+.impressum .angaben a {
+    color: white;               /* Match the text color */
+    text-decoration: underline; /* Underline to indicate it's a link */
+}
+
+.impressum .angaben a:hover {
+    color: white;               /* Maintain color on hover */
+}
+
+/* Footer Navigation */
+.footer-nav {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-nav li {
+    margin: 0 15px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #ef4b5e;
+}
+
+/* Add spacing between icons and text if using icons */
+.footer-nav a i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Impressum Page Specific Styles */
+.impressum h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #991B1F;
+}
+
+.impressum section {
+    margin-bottom: 30px;
+}
+
+.impressum h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.impressum h3 {
+    color: #991B1F;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.impressum p {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+/* Optional: Style for Back to Home Link */
+.impressum .footer-nav a {
+    display: inline-flex;
+    align-items: center;
+}
+
+.impressum .footer-nav a i {
+    margin-right: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-nav ul {
+        flex-direction: column; /* Stack links vertically on small screens */
+        align-items: center;
+    }
+
+    .footer-nav li {
+        margin: 10px 0; /* Space between stacked links */
+    }
+
+    .logo img {
+        height: 75px;
+        width: auto;
+    }
+
+    .impressum {
+        /* Wider in mobile view for better readability */
+        padding: 10px;
+        font-size: 14px;       /* Slightly smaller font size for mobile */
+    }
+
+    /* Scrolled State */
+    .button.scrolled {
+        transform: translate(-50%, -500%); /* Move the button upwards further on mobile */
+    }
+
+    .button {
+        padding: 15px 30px;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+}
