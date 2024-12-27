@@ -1,0 +1,204 @@
+/* impressum.css */
+
+/* Global Box-Sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset and Base Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevents horizontal scrollbar */
+}
+
+/* Logo Styling */
+.impressum-logo {
+    position: fixed; /* Keeps the logo fixed on the viewport */
+    top: 20px;
+    left: 20px;
+    z-index: 1000; /* Ensures the logo stays above other elements */
+}
+
+.impressum-logo img {
+    height: 80px; /* Adjust the size as needed */
+    width: auto;
+    border-radius: 5px; /* Optional: Adds slight rounding to the logo */
+    border: none; /* Removes any unintended borders */
+}
+
+/* Responsive Design for Logo */
+@media (max-width: 768px) {
+    .impressum-logo {
+        top: 10px;
+        left: 10px;
+    }
+
+    .impressum-logo img {
+        height: 60px; /* Smaller logo on mobile */
+    }
+}
+
+/* Content Styling */
+.content {
+    max-width: 800px;
+    margin: 50px auto; /* Top margin to prevent overlap with the fixed logo */
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #991B1F;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 40px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+a {
+    color: #991B1F;
+    text-decoration: none;
+    border-bottom: 1px solid #991B1F;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+a:hover {
+    color: #b22234;
+    border-bottom-color: #b22234;
+}
+
+/* Footer Styling */
+.impressum-footer {
+    background-color: #f1f1f1; /* Light background for better contrast */
+    color: #991B1F; /* Set default text color to red */
+    padding: 40px 20px;
+    text-align: center;
+    overflow: hidden; /* Prevents child elements from overflowing */
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Use Flexbox for horizontal alignment */
+    justify-content: center; /* Centers the navigation horizontally */
+    flex-wrap: wrap; /* Allows items to wrap to the next line if necessary */
+    max-width: 100%; /* Prevents the list from exceeding the viewport */
+}
+
+.footer-nav ul li {
+    margin: 10px 15px; /* Adjusted horizontal and vertical spacing */
+}
+
+.footer-nav a {
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #991B1F; /* Red links */
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #b22234; /* Darker red on hover */
+}
+
+.footer-nav a i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+/* Specific Styling for "Zurück zur Startseite" Link */
+.footer-nav a.home-link {
+    color: #ffffff; /* White text */
+    background-color: #991B1F; /* Red background */
+    padding: 5px 10px; /* Padding for better click area */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-nav a.home-link:hover {
+    color: #ffffff; /* Maintain white text on hover */
+    background-color: #b22234; /* Darker red background on hover */
+}
+
+/* Prevent Footer Overflow */
+.impressum-footer,
+.footer-nav ul {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+    .content {
+        margin: 20px auto; /* Reduced top margin for smaller screens */
+        padding: 20px;
+    }
+
+    .impressum-logo {
+        top: 10px;
+        left: 10px;
+    }
+
+    .impressum-logo img {
+        height: 60px; /* Smaller logo on mobile */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    .footer-nav ul {
+        flex-direction: column; /* Stacks the links vertically on mobile */
+        align-items: center;
+    }
+
+    .footer-nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .footer-nav a {
+        justify-content: center;
+    }
+
+    /* Adjust "Zurück zur Startseite" Link on Mobile */
+    .footer-nav a.home-link {
+        padding: 8px 16px;
+        font-size: 18px;
+    }
+}
