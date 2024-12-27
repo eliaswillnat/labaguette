@@ -1,16 +1,14 @@
-
-/* Reset and Base Styles */
 body, html {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Video Background */
 .video-background {
     position: fixed;
     top: 0;
@@ -27,9 +25,8 @@ h1, h2, h3, h4, h5, h6 {
     object-fit: cover;
 }
 
-/* Logo */
 .logo {
-    position: fixed; /* Ensures the logo stays fixed during scrolling */
+    position: fixed;
     top: 20px;
     left: 20px;
     z-index: 2;
@@ -40,78 +37,70 @@ h1, h2, h3, h4, h5, h6 {
     width: auto;
 }
 
-/* Content */
 .content {
-    /* Removed absolute positioning to allow normal flow */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensure content takes full viewport height */
+    min-height: 100vh;
     z-index: 1;
-    padding-bottom: 100px; /* Optional: Add padding to ensure footer is below */
+    padding-bottom: 100px;
 }
 
-/* Button */
 .button {
     background-color: #991B1F;
     color: white;
     border: none;
-    padding: 10px 20px; /* Original padding */
-    border-radius: 7px; /* Original border radius */
-    font-size: 25px; /* Original font size */
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-size: 25px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
     outline: none;
-    opacity: 1; /* Ensure the button is visible */
-    transition: transform 1s ease; /* Smooth transition for transform */
-    position: fixed; /* Fixed initially */
+    opacity: 1;
+    transition: transform 1s ease;
+    position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the button */
-    z-index: 1; /* Ensure it appears above other content */
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .button:hover {
     background-color: #b22234;
 }
 
-/* Scrolled State */
 .button.scrolled {
-    transform: translate(-50%, -300%); /* Move the button upwards */
+    transform: translate(-50%, -300%);
 }
 
-/* Footer */
 .impressum {
     background-color: #991B1F;
     color: white;
     padding: 20px;
-    text-align: left; /* Ensure default text alignment is left */
+    text-align: left;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
 }
 
-/* Centered Angaben Section with Left-Aligned Text */
 .impressum .angaben {
-    max-width: 600px;           /* Sets a maximum width for the container */
-    margin: 0 auto 20px auto;   /* Centers the container horizontally and adds bottom margin */
-    text-align: left;           /* Aligns text to the left within the container */
-    margin-left: 20px;          /* Adds left margin */
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    text-align: left;
+    margin-left: 20px;
 }
 
-/* Style links inside the angaben section */
 .impressum .angaben a {
-    color: white;               /* Match the text color */
-    text-decoration: underline; /* Underline to indicate it's a link */
+    color: white;
+    text-decoration: underline;
 }
 
 .impressum .angaben a:hover {
-    color: white;               /* Maintain color on hover */
+    color: white;
 }
 
-/* Footer Navigation */
 .footer-nav {
     margin-top: 30px;
     margin-bottom: 40px;
@@ -141,12 +130,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #ef4b5e;
 }
 
-/* Add spacing between icons and text if using icons */
 .footer-nav a i {
-    margin-right: 8px; /* Space between icon and text */
+    margin-right: 8px;
 }
 
-/* Impressum Page Specific Styles */
 .impressum h1 {
     text-align: center;
     margin-bottom: 25px;
@@ -173,7 +160,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
 }
 
-/* Optional: Style for Back to Home Link */
 .impressum .footer-nav a {
     display: inline-flex;
     align-items: center;
@@ -183,15 +169,14 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 5px;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
     .footer-nav ul {
-        flex-direction: column; /* Stack links vertically on small screens */
+        flex-direction: column;
         align-items: center;
     }
 
     .footer-nav li {
-        margin: 10px 0; /* Space between stacked links */
+        margin: 10px 0;
     }
 
     .logo img {
@@ -200,14 +185,12 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .impressum {
-        /* Wider in mobile view for better readability */
         padding: 10px;
-        font-size: 14px;       /* Slightly smaller font size for mobile */
+        font-size: 14px;
     }
 
-    /* Scrolled State */
     .button.scrolled {
-        transform: translate(-50%, -500%); /* Move the button upwards further on mobile */
+        transform: translate(-50%, -500%);
     }
 
     .button {
