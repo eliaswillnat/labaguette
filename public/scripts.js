@@ -1,6 +1,7 @@
 // Wait for the DOM to load
 document.addEventListener('DOMContentLoaded', () => {
     const kontaktButton = document.getElementById('kontakt-button');
+    const scrollIndicator = document.querySelector('.scroll-indicator');
     const backgroundVideo = document.getElementById('background-video');
     const desktopScrollThreshold = 100; // Desktop devices
     const mobileScrollThreshold = 200;  // Mobile devices
@@ -21,8 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const handleScroll = () => {
         if (window.scrollY > scrollThreshold) {
             kontaktButton.classList.add('scrolled');
+            if (scrollIndicator) {
+                scrollIndicator.classList.add('hidden');
+            }
         } else {
             kontaktButton.classList.remove('scrolled');
+            if (scrollIndicator) {
+                scrollIndicator.classList.remove('hidden');
+            }
         }
     };
 
