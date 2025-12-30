@@ -5,6 +5,7 @@ body, html {
 }
 
 .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined', sans-serif;
     font-variation-settings:
     'FILL' 0,
     'wght' 400,
