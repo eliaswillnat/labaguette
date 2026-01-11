@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const desktopScrollThreshold = 100; // Desktop devices
     const mobileScrollThreshold = 200;  // Mobile devices
     const videoLoopDelay = 2000;         // Delay in milliseconds (2000ms = 2 seconds)
+    const scrollStopDelay = 150;
 
     if (faviconLink) {
         faviconLink.href = FAVICON_URL;
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let scrollThreshold = getScrollThreshold();
 
     let isTicking = false;
+    let scrollStopTimeout;
 
     // Function to handle scroll
     const handleScroll = () => {
@@ -73,6 +75,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }, videoLoopDelay);
     };
 
+    const handleScrollVideoPerformance = () => {
+        if (!backgroundVideo) {
+            return;
+        }
+
+        if (!backgroundVideo.paused) {
+            backgroundVideo.pause();
+        }
+
+        window.clearTimeout(scrollStopTimeout);
+        scrollStopTimeout = window.setTimeout(() => {
+            backgroundVideo.play();
+        }, scrollStopDelay);
+    };
+
     // Listen to the scroll event
     const handleScrollEvent = () => {
         if (!isTicking) {
@@ -82,6 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             isTicking = true;
         }
+
+        handleScrollVideoPerformance();
     };
 
     if (kontaktButton) {
