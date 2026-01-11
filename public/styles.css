@@ -93,7 +93,6 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2px;
     color: #ffffff;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
     z-index: 3;
@@ -107,11 +106,6 @@ h1, h2, h3, h4, h5, h6 {
     height: 40px;
     fill: currentColor;
     animation: scrollPulse 1.8s ease-in-out infinite;
-}
-
-.scroll-indicator .scroll-icon:last-child {
-    animation-delay: 0.2s;
-    opacity: 0.7;
 }
 
 .scroll-indicator.hidden {
