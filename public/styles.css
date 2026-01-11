@@ -4,27 +4,6 @@ body, html {
     padding: 0;
 }
 
-.material-symbols-outlined {
-    font-family: 'Material Symbols Outlined', sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -webkit-font-feature-settings: 'liga';
-    -webkit-font-smoothing: antialiased;
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
-}
-
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
@@ -113,12 +92,14 @@ h1, h2, h3, h4, h5, h6 {
     pointer-events: none;
 }
 
-.scroll-indicator .material-symbols-outlined {
-    font-size: 40px;
+.scroll-indicator .scroll-icon {
+    width: 40px;
+    height: 40px;
+    fill: currentColor;
     animation: scrollPulse 1.8s ease-in-out infinite;
 }
 
-.scroll-indicator .material-symbols-outlined:last-child {
+.scroll-indicator .scroll-icon:last-child {
     animation-delay: 0.2s;
     opacity: 0.7;
 }
