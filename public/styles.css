@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 35px);
+    transform: translate(-50%, 55px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 40px;
     height: 40px;
     fill: currentColor;
-    animation: scrollPulse 1.8s ease-in-out infinite;
+    animation: scrollPulse 3.6s ease-in-out infinite;
 }
 
 .scroll-indicator.hidden {
