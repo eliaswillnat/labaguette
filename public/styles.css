@@ -91,11 +91,10 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 35px);
+    transform: translate(-50%, 55px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2px;
     color: #ffffff;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
     z-index: 3;
@@ -108,12 +107,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 40px;
     height: 40px;
     fill: currentColor;
-    animation: scrollPulse 1.8s ease-in-out infinite;
-}
-
-.scroll-indicator .scroll-icon:last-child {
-    animation-delay: 0.2s;
-    opacity: 0.7;
+    animation: scrollPulse 3.2s ease-in-out infinite;
 }
 
 .scroll-indicator.hidden {
@@ -123,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes scrollPulse {
     0% {
         transform: translateY(0);
-        opacity: 0.3;
+        opacity: 0;
     }
     50% {
         transform: translateY(8px);
@@ -131,7 +125,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     100% {
         transform: translateY(0);
-        opacity: 0.3;
+        opacity: 0;
     }
 }
 
