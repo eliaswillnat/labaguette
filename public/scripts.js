@@ -42,22 +42,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let scrollThreshold = getScrollThreshold();
 
+    let isTicking = false;
+
     // Function to handle scroll
     const handleScroll = () => {
         if (!kontaktButton) {
             return;
         }
 
-        if (window.scrollY > scrollThreshold) {
-            kontaktButton.classList.add('scrolled');
-            if (scrollIndicator) {
-                scrollIndicator.classList.add('hidden');
-            }
-        } else {
-            kontaktButton.classList.remove('scrolled');
-            if (scrollIndicator) {
-                scrollIndicator.classList.remove('hidden');
-            }
+        const isScrolled = window.scrollY > scrollThreshold;
+        kontaktButton.classList.toggle('scrolled', isScrolled);
+        if (scrollIndicator) {
+            scrollIndicator.classList.toggle('hidden', isScrolled);
         }
     };
 
@@ -78,9 +74,19 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Listen to the scroll event
+    const handleScrollEvent = () => {
+        if (!isTicking) {
+            window.requestAnimationFrame(() => {
+                handleScroll();
+                isTicking = false;
+            });
+            isTicking = true;
+        }
+    };
+
     if (kontaktButton) {
         // Listen to the scroll event
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScrollEvent, { passive: true });
         // Listen to the resize event
         window.addEventListener('resize', handleResize);
     }
