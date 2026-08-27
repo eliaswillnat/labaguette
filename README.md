@@ -8,10 +8,10 @@ La Baguette is dedicated to bringing the taste of France to Freiburg im Breisgau
 
 ## Hosting
 
-This is a static site deployed entirely on **Firebase Hosting** (`labaguette-123456`).
+This is a static site deployed entirely on **Firebase Hosting** (`labaguette-1234567`).
 
-- Live: https://labaguette-123456.web.app
-- Alternate: https://labaguette-123456.firebaseapp.com
+- Live: https://labaguette-1234567.web.app
+- Alternate: https://labaguette-1234567.firebaseapp.com
 
 Media (intro video, logos, favicon) is served from `public/assets/` on Firebase Hosting. There is no Vercel or Vercel Blob dependency.
 
